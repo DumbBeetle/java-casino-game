@@ -1,0 +1,29 @@
+* Hand3 animation frame doesn't look natural enough, hand may need to be extend downwards.
+
+* Important optimize creating new Transitions by removing and editing existing ones.
+    example class-> PokerGame: Method-> cardBurning; could be changed not to create new Transition.
+    instead return the one from class-> CardAnimation: Method-> burnCardAnimation;
+
+* Round consist of 4 betting rounds
+    Preflop round
+    Flop round
+    Turn round
+    River round
+
+*  Round
+    1. the first player on the dealer's left will be picked as the small blind and indexed,
+      the player on his left will be chosen as the big blind.
+    2. the player on the left of the big blind starts the round, he can chose to call, fold or raise.
+    3. the process repeats after each player until every remaining player called.
+    4. 3 community cards are then placed on the table.
+    5. small blind starts the round, every one do their thing.
+    6. 1 community card is then placed on the table.
+    7. repeat 5.
+    8. repeat 6.
+    9. repeat 5.
+    10. winner is chosen.
+    11. small and big blinds pass to the next players and repeat from 1.
+
+
+* Make round system
+    Player in round List need to be incorporated at start of round

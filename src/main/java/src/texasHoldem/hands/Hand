@@ -1,0 +1,93 @@
+Hand value:
+
+No Pair (High Card) = 1 only check highest card value
+One Pair (2 2) = 2
+Two Pairs (2 2 , 3 3) = 3
+Three of a Kind (2 2 2) = 4
+Straight (2 3 4 5 6) = 5
+Flush (5 cards with the same symbol) = 6
+Full House (2 2 2 , 3 3) = 7
+Four of a Kind (2 2 2 2) = 8
+Straight Flush (2 3 4 5 6 with same symbol) = 9
+Royal Straight Flush (10 J Q K A with same symbol) = 10
+
+You always play the best 5 cards ONLY.
+In case of pair and above high card check should be on the pair.
+In case of pair and above having equal value check highest card that's not related to the pair.
+
+                                         Card Checker
+
+* Cards are added to list as raw data.
+  need to get Symbol and Rank from them.
+
+Four lists
+1 to hold all of the cards
+2 to check Symbols
+3 to check Ranks
+4 to only holds the best (up to 5) cards
+
+
+* Four of a kind and Full House can never be flush or straight
+
+* If found flush keep those 5 cards and check them for straight, if also found straight check high card,
+  if high card is Ace then return 9 else return 8
+
+* If found straight keep those 5 cards and return 4.
+  Else check for pairs.
+
+  If two players have pairs check who has the highest pair.
+  If two players or more have the same pair then check who has the highest card of the remaining cards.
+
+
+  after pair check
+  cards will be kept in list without their duplicates and instead a string will keep the count
+
+  before:
+  2 3 3 3 7 A A list
+  1 3     1 2   string
+  after:
+  2 3 7 A list
+  1 3 1 2 string
+
+  cards will be added to temp list in backwards order from last to first
+  if found 4 will look for 1 highest card (not related to the 4)
+  if found 3 will look for 2 or 1 1
+  if found 2 will look 3 or 2 1 or 1 1 1
+  if found 1 will look for 1 1 1 1
+
+  and then back to main list with their duplicates
+
+
+  Card checker is supposed to return an array with values
+  player values, pair 1, pair 2, fifth card.
+
+  Tie:
+  Pairs - check highest not pair related card.
+  Straight - check highest card.
+  Flush - check highest card if tie again check next until tie break or you run out of cards.
+  Straight Flush - check highest card.
+  Royal Flush - split pot.
+
+  If there's no tie breaker current players split the pot.
+
+
+  In case of ties check for
+    No Pair (High Card) = only check highest card value
+    One Pair (2 2) = check value, check high card.
+    Two Pairs (2 2 , 3 3) = check values, check high card.
+    Three of a Kind (2 2 2) = check value, check high card.
+    Straight (2 3 4 5 6) = check high card.
+    Flush (5 cards with the same symbol) = check high card, check second highest and so on.
+    Full House (2 2 2 , 3 3) = check values
+    Four of a Kind (2 2 2 2) = check value, check high card.
+    Straight Flush (2 3 4 5 6 with same symbol) = check high card
+    Royal Straight Flush (10 J Q K A with same symbol) = tie
+
+
+
+
+
+
+
+
+

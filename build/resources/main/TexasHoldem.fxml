@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="mapScreen" onKeyPressed="#keyPressed" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.texasHoldem.Controller">
+    <children>
+        <ImageView fx:id="background" disable="true" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/FinalTable.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="buttonCheck" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@images/Buttons/Check.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="buttonFold" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Buttons/Fold.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="buttonRaise" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Buttons/Raise.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="seat0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Seat.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="seat1" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Seat.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="seat2" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Seat.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="seat3" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Seat.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="seat4" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Seat.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="seat5" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Seat.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="dealerHand" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Hand1.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="testButton" layoutX="438.0" layoutY="569.0" mnemonicParsing="false" text="Player Draw" />
+        <Button fx:id="testButton1" layoutX="438.0" layoutY="673.0" mnemonicParsing="false" text="Table Draw" />
+      <ImageView fx:id="dealerStaticHand" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/StaticHand.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="returnButton" layoutX="918.0" layoutY="710.0" mnemonicParsing="false" text="Return to hand" />
+      <Button fx:id="checker" layoutX="543.0" layoutY="765.0" mnemonicParsing="false" text="Check Cards" />
+    </children>
+</AnchorPane>

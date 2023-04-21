@@ -1,0 +1,18 @@
+.progress-indicator .indicator {
+    -fx-background-color: transparent ;
+}
+.progress-indicator .percentage {
+    -fx-fill:null;
+}
+.progress-indicator  {
+    -fx-padding: 0 0 -16 0;
+}
+.progress-indicator {
+    -fx-progress-color: green ;
+}
+.progress-indicator:critical {
+    -fx-progress-color: red ;
+}
+.progress-indicator:warning {
+    -fx-progress-color: orange ;
+}
